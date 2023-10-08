@@ -4,7 +4,7 @@ Lecture notes from the Polytechnic of Turin.
 Slides: https://dbdmg.polito.it/dbdmg_web/index.php/2023/09/27/data-science-lab-process-and-methods-2023-24/
 
 ## 📚 Lecture 2023-10-04:
-*Slides: 01-Python-Intro all, 02-Python-Programming*
+*Slides: 01-Python-Intro all, 02-Python-Programming to page 26*
 
 Python is an interpreted language. 🙀
 
