@@ -18,3 +18,7 @@ Basic immutable data types: int, float, bool, str, None.
 
 Composite data types: tuple (immutable), list, set, dict.
 
+## 📚 Lecture 2023-10-11:
+*Slides: 02-Python-Programming to page 75*
+
+Arguments: tuple, list, set, dictionary, if/elif/else, iterations, class.
