@@ -22,3 +22,15 @@ Composite data types: tuple (immutable), list, set, dict.
 *Slides: 02-Python-Programming to page 75*
 
 Arguments: tuple, list, set, dictionary, if/elif/else, iterations, class.
+
+## 📚 Lecture 2023-10-16:
+*Slides: labs/lab1*
+
+## 📚 Lecture 2023-10-16 bis:
+*Slides: 02-Python-Programming all, 03-Python-Projects to 10*
+
+Arguments: dict, methods, classes, package, module, import
+
+## 📚 Lecture 2023-10-23:
+*Slides: labs/lab2*
+

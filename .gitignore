@@ -133,3 +133,8 @@ dmypy.json
 .vscode/
 .code/
 .DS_Store
+
+
+# Ignore dataset
+*.csv
+*.json
