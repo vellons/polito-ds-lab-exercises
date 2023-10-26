@@ -27,7 +27,7 @@ Arguments: tuple, list, set, dictionary, if/elif/else, iterations, class.
 *Slides: labs/lab1*
 
 ## 📚 Lecture 2023-10-16 bis:
-*Slides: 02-Python-Programming all, 03-Python-Projects to 10*
+*Slides: 02-Python-Programming all, 03-Python-Projects to 13*
 
 Arguments: dict, methods, classes, package, module, import
 
