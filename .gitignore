@@ -138,3 +138,4 @@ dmypy.json
 # Ignore dataset
 *.csv
 *.json
+*.txt
