@@ -34,3 +34,5 @@ Arguments: dict, methods, classes, package, module, import
 ## 📚 Lecture 2023-10-23:
 *Slides: labs/lab2*
 
+## 📚 Lecture 2023-10-30:
+*Slides: labs/lab3*
