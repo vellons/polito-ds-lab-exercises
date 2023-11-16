@@ -27,12 +27,19 @@ Arguments: tuple, list, set, dictionary, if/elif/else, iterations, class.
 *Slides: labs/lab1*
 
 ## 📚 Lecture 2023-10-16 bis:
-*Slides: 02-Python-Programming all, 03-Python-Projects to 13*
+*Slides: 02-Python-Programming all, 03-Python-Projects all*
 
 Arguments: dict, methods, classes, package, module, import
 
 ## 📚 Lecture 2023-10-23:
 *Slides: labs/lab2*
 
+## 📚 Lecture 2023-10-25:
+*04-Numpy to 36*
+
 ## 📚 Lecture 2023-10-30:
 *Slides: labs/lab3*
+
+## 📚 Lecture 2023-11-08:
+*04-Numpy to all*
+https://github.com/dbdmg/data-science-lab/blob/master/exercises/2-Numpy%20Examples-Solution.ipynb
