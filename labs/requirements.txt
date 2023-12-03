@@ -1,3 +1,8 @@
+jupyterlab
+notebook
 ipykernel
 matplotlib
 scipy
+pandas
+scikit-learn
+pydot  # brew install gprof2dot (used in lab6)
