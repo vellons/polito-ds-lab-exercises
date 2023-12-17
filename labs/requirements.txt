@@ -6,3 +6,4 @@ scipy
 pandas
 scikit-learn
 pydot  # brew install gprof2dot (used in lab6)
+prettytable  # (used in lab8)
