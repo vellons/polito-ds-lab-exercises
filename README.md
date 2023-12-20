@@ -78,3 +78,32 @@ https://github.com/dbdmg/data-science-lab/blob/master/exercises/2-Numpy%20Exampl
 - [K-Nearest Neighbors algorithm on Iris dataset](labs/lab4/k-neareset-neighbors.ipynb)
 
 Build your own version of the K-Nearest Neighbors algorithm (a.k.a. KNN) using the NumPy library.
+
+
+## 📚 Lecture 2023-11-13:
+*Slides: labs/lab4*
+
+- [K-Nearest Neighbors algorithm on Iris dataset](labs/lab4/k-neareset-neighbors.ipynb)
+
+Build your own version of the K-Nearest Neighbors algorithm (a.k.a. KNN) using the NumPy library.
+
+
+## 📚 Lecture 2023-12-11:
+*Slides: labs/lab5*
+
+- [Univariate and multivariate regression](labs/lab8/univariate_and_multivariate_regression.ipynb)
+- [Series forecasting](labs/lab8/series_forecasting.ipynb)
+
+
+## 📚 Lecture 2023-12-11:
+*Slides: labs/lab6*
+
+- [Univariate and multivariate regression](labs/lab8/univariate_and_multivariate_regression.ipynb)
+- [Series forecasting](labs/lab8/series_forecasting.ipynb)
+
+
+## 📚 Lecture 2023-12-11:
+*Slides: labs/lab8*
+
+- [Univariate and multivariate regression](labs/lab8/univariate_and_multivariate_regression.ipynb)
+- [Series forecasting](labs/lab8/series_forecasting.ipynb)
