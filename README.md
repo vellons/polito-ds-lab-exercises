@@ -80,26 +80,16 @@ https://github.com/dbdmg/data-science-lab/blob/master/exercises/2-Numpy%20Exampl
 Build your own version of the K-Nearest Neighbors algorithm (a.k.a. KNN) using the NumPy library.
 
 
-## 📚 Lecture 2023-11-13:
-*Slides: labs/lab4*
-
-- [K-Nearest Neighbors algorithm on Iris dataset](labs/lab4/k-neareset-neighbors.ipynb)
-
-Build your own version of the K-Nearest Neighbors algorithm (a.k.a. KNN) using the NumPy library.
-
-
 ## 📚 Lecture 2023-12-11:
 *Slides: labs/lab5*
 
-- [Univariate and multivariate regression](labs/lab8/univariate_and_multivariate_regression.ipynb)
-- [Series forecasting](labs/lab8/series_forecasting.ipynb)
+- [New York points of intrest with pandas and matplotlib](labs/lab5/new_york_map_pandas_and_matplotlib.ipynb)
 
 
 ## 📚 Lecture 2023-12-11:
 *Slides: labs/lab6*
 
-- [Univariate and multivariate regression](labs/lab8/univariate_and_multivariate_regression.ipynb)
-- [Series forecasting](labs/lab8/series_forecasting.ipynb)
+- [Wine classification](labs/lab6/wine_classification.ipynb)
 
 
 ## 📚 Lecture 2023-12-11:
@@ -107,3 +97,12 @@ Build your own version of the K-Nearest Neighbors algorithm (a.k.a. KNN) using t
 
 - [Univariate and multivariate regression](labs/lab8/univariate_and_multivariate_regression.ipynb)
 - [Series forecasting](labs/lab8/series_forecasting.ipynb)
+
+
+## 📚 Lecture 2023-12-18:
+*Slides: labs/lab9*
+
+With submission
+MSE score: 30917.152
+
+- [Airbnb price prediction in New Yotk](labs/lab9/airbnb_apartment_price_prediction.ipynb)
