@@ -5,6 +5,9 @@ Slides: https://dbdmg.polito.it/dbdmg_web/index.php/2023/09/27/data-science-lab-
 
 This is a collections of notes from labs and exercises.
 
+## Exam 🙀⏳
+In the `exam` folder you can find our solution for the winter 2024 exam. 
+
 
 ## 📚 Lecture 2023-10-04:
 *Slides: 01-Python-Intro all, 02-Python-Programming to page 26*
@@ -105,4 +108,4 @@ Build your own version of the K-Nearest Neighbors algorithm (a.k.a. KNN) using t
 With submission
 MSE score: 30917.152
 
-- [Airbnb price prediction in New Yotk](labs/lab9/airbnb_apartment_price_prediction.ipynb)
+- [Airbnb price prediction in New York](labs/lab9/airbnb_apartment_price_prediction.ipynb)
