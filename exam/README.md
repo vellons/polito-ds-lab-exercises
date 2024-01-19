@@ -32,32 +32,38 @@ R2 score and Euclidean score are calculated on the test set. The test set is 25%
 Submission score is the score obtained by submitting the predictions to the PoliTO server.
 
 ### Random Forest with MultiOutputRegressor - differens hyperparameters
-|    Time | n_estimators | criterion     | max_features | R2 score   | Euclidean score | Submission score |
-|--------:|--------------|---------------|--------------|------------|-----------------|------------------|
-| 52s     | 100          | squared_error | log2         | 0.99848024 | 5.369           | 5.577            |
-| 2m 49s  | 300          | squared_error | log2         | 0.99855958 | 5.220           | 5.730            |
-| 1m 10s  | 100          | squared_error | sqrt         | 0.99877615 | 4.842 [4.703]** | 5.243 [5.157]**  |
-| 2m 20s  | 200          | squared_error | sqrt         | 0.99882048 | 4.753           | 5.153            |
-| 4m 53s  | 400          | squared_error | sqrt         | 0.99884119 | 4.708           | 5.104            |
-| 2m 20s  | 200          | friedman_mse  | sqrt         | 0.99882251 | 4.746           | skip             |
-| 8m 22s  | 600          | friedman_mse  | sqrt         | 0.99884875 | 4.690           | 5.089            |
-| 2m 38s  | 200          | poisson       | sqrt         | 0.99881351 | 4.759           | skip             |
-| 4m 48s  | 100          | squared_error | 0.35         | 0.99904227 | 4.255**         | skip             |
-| 6m 02s  | 100          | squared_error | 0.45         | 0.99904534 | 4.251**         | 4.851**          |
-| 4m 50s  | 100+variance | squared_error | 0.45         | 0.99905931 | 4.222**         | 4.810**          |
-| 3m 37s  | 100+SelectFwe| squared_error | 0.45         | 0.99907773 | 4.171**         | 4.810**          |
-| 18m 24s | 400+variance | squared_error | 0.45         | 0.99908886 | 4.160**         | 4.757**          |
-| 22m 9s  | 600+SelectFwe| squared_error | 0.45         | 0.99910309 | **4.118****     | **4.721****      |
-| 7m 19s  | 100          | squared_error | 0.55         | 0.99903096 | 4.271**         | 4.879**          |
-| 8m 16s  | 100          | squared_error | 0.63         | 0.99902100 | 4.286**         | skip             |
-| 7m 10s  | 100          | friedman_mse  | 0.7          | 0.99894805 | 4.425           | 5.009            |
-| 11m 24s | 100          | squared_error | 1.0          | 0.99875576 | 4.689           | 5.361            |
+|    Time | n_estimators     | criterion     | max_features | R2 score   | Euclidean score | Submission score |
+|--------:|------------------|---------------|--------------|------------|-----------------|------------------|
+| 52s     | 100              | squared_error | log2         | 0.99848024 | 5.369           | 5.577            |
+| 2m 49s  | 300              | squared_error | log2         | 0.99855958 | 5.220           | 5.730            |
+| 1m 10s  | 100              | squared_error | sqrt         | 0.99877615 | 4.842 [4.703]** | 5.243 [5.157]**  |
+| 2m 20s  | 200              | squared_error | sqrt         | 0.99882048 | 4.753           | 5.153            |
+| 4m 53s  | 400              | squared_error | sqrt         | 0.99884119 | 4.708           | 5.104            |
+| 2m 20s  | 200              | friedman_mse  | sqrt         | 0.99882251 | 4.746           | skip             |
+| 8m 22s  | 600              | friedman_mse  | sqrt         | 0.99884875 | 4.690           | 5.089            |
+| 2m 38s  | 200              | poisson       | sqrt         | 0.99881351 | 4.759           | skip             |
+| 4m 48s  | 100              | squared_error | 0.35         | 0.99904227 | 4.255**         | skip             |
+| 6m 02s  | 100              | squared_error | 0.45         | 0.99904534 | 4.251**         | 4.851**          |
+| 7m 19s  | 100              | squared_error | 0.55         | 0.99903096 | 4.271**         | 4.879**          |
+| 8m 16s  | 100              | squared_error | 0.63         | 0.99902100 | 4.286**         | skip             |
+| 7m 10s  | 100              | friedman_mse  | 0.7          | 0.99894805 | 4.425           | 5.009            |
+| 11m 24s | 100              | squared_error | 1.0          | 0.99875576 | 4.689           | 5.361            |
+| 4m 50s  | 100+variance     | squared_error | 0.45         | 0.99905931 | 4.222**         | 4.810**          |
+| 18m 24s | 400+variance     | squared_error | 0.45         | 0.99908886 | 4.160**         | 4.757**          |
+| 3m 37s  | 100+SelectFwe    | squared_error | 0.45         | 0.99907773 | 4.171**         | 4.810**          |
+| 22m 09s | 600+SelectFwe    | squared_error | 0.45         | 0.99910309 | 4.118**         | 4.721**          |
+| 2m 16s  | 100+SelectFwe+FS | squared_error | 0.45         | 0.99908564 | 4.154**         | 4.820**          |
+| 21m 08s | 600+SelectFwe+FS | squared_error | 0.45         | 0.99911044 | **4.099****     | **4.710****      |
+
+
 
 ** Performed with test_size=0.05
 
 Variance = Removes all low-variance features.
 
 SelectFwe = Select features based on false discovery rate.
+
+FS = Manually Feature Selection removing usless features from the dataset
 
 Also tested with criterion "absolute_error" but it was stopped after 20 minutes of training.
 
