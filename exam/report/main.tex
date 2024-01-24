@@ -125,11 +125,11 @@ This pattern evokes the sensor image described in the problem statement, suggest
 \end{figure}
 
 The preprocessing phase begins by understanding the utility of all the 5 features extracted 
-from the signals exported by the pads.
+from the signals that are exported by the pads.
 
 Feature selection process was employed during the preprocessing phase. After experimenting with 
 various feature combinations, it was determined that the model yielded better results when 
-trained on a subset of features. \cite{OpenAI_ChatGPT_help_me_on_this}
+trained on a subset of features.
 Features associated with \textit{“tmax”} and \textit{“rms”} were identified as less impactful, 
 prompting their removal from the dataset.
 This first phase removes 36 columns from the dataset.\\
@@ -164,7 +164,7 @@ For doing that the \textit{MinMaxScaler} preprocessing function has been applied
 In this context of regression analysis, where the objective is to predict continuous numerical values 
 a regressor model needs to be used. After performing different tests, the selected model is the 
 \textit{Extra Trees Regressor} from scikit-learn's python library, but we also used the 
-\textit{Random Forest Regressor} for performing tests on different hyperparameters.
+\textit{Random Forest Regressor} for performing tests initials on different hyperparameters.
 
 The \textit{RandomForestRegressor} is an algorithm belonging to the family of decision tree methods. 
 Comprising an ensemble of numerous decision trees, this model excels in capturing complex 
@@ -180,7 +180,13 @@ employs random subsets of features for node splitting. However, it differs in
 two key aspects: it does not bootstrap observations 
 (sampling without replacement), and nodes are split based on random splits among a random subset
 of features at each node. This distinctive approach contributes to its effectiveness in 
-capturing patterns within the dataset. \cite{stackexchange_438384}
+capturing patterns within the dataset. \cite{stackexchange_438384}\\
+
+After investing considerable time in fine-tuning the \textit{RandomForestRegressor},
+we realized that the \textit{ExtraTreesRegressor} proved to be a better fit in this 
+particular case. The extensive effort in searching for optimal hyperparameters for 
+the initial model moved to the \textit{ExtraTreesRegressor}, where 
+we found that the same parameters were well-suited for achieving improved performance.
 
 
 \subsection{Hyperparameters tuning}
@@ -194,7 +200,7 @@ across various parameter combinations.\\
 
 The pipeline has been evaluated splitting the development dataset. 
 Initially, a partition of 75\% for training and 25\% for testing resulted in 366,225 training 
-instances and 19,275 testing instances. Subsequently, in preparation for the final submission, 
+events and 19,275 testing events. Subsequently, in preparation for the final submission, 
 a more focused 95-5\% split was adopted to augment algorithm training. 
 The decision to reduce the test set to 5\% occurred post-hyperparameter tuning, enabling the 
 algorithm to benefit from an increased volume of training data. This strategic adjustment 
@@ -218,7 +224,7 @@ time&  preprocessing&  criterion&  max\_features& score\\ \hline
 \label{tab:hyperparameters_table}
 \end{table}
 
-Table \ref{tab:hyperparameters_table} provides an overview of the time invested, 
+Table \ref{tab:hyperparameters_table} provides an overview of the time invested on fitting, 
 preprocessing techniques applied, criterion selection, maximum features considered, 
 and the local resulting scores achieved during the hyperparameter tuning process. 
 It serves as a valuable reference to understand the evolution of our model's 
@@ -258,12 +264,12 @@ In the initial tests, the \textit{R²} score registered 0.99848024, while the \t
 distance} stood at 5.181. Following hyperparameter tuning, these metrics further improved, 
 reaching an \textit{R²} score of 0.99903096 and a reduced \textit{Euclidean distance} of 4.251.
 
-Subsequently, preprocessing techniques were applied to refine the model's performance:
+Subsequently, preprocessing techniques were applied to get better results:
 \begin{itemize}
     \item Using \textit{VarianceThreshold} the \textit{Euclidean distance} further decreased to 4.222.
     \item Using \textit{SelectFwe}: approach resulted in a \textit{Euclidean distance} of 4.171.
     \item \textit{SelectFwe} + Feature Selection removing redundant features such 
-    as \textit{“tmax”} and \textit{“rms”} contributed to an 
+    as \textit{“tmax”} and \textit{“rms”} resulted to an 
     \textit{Euclidean distance} of 4.154.
 \end{itemize}
 
@@ -271,12 +277,12 @@ These adjustments and preprocessing steps not only fine-tuned our model but also
 the significance of carefully chosen evaluation metrics, ensuring a comprehensive understanding 
 of the pipeline capabilities.\\
 
-As outlined in the hyperparameters section, all these tests were conducted with 
+As explained in the hyperparameters section, all these tests were conducted with 
 the \textit{Number of Estimators} set to 100. In preparation for submission, the algorithm 
 was refitted with 400 estimators, resulting in a \textit{Euclidean distance} 
 of 3.907, obtained after 5 minutes of fitting. 
 However, the score obtained with the submitted CSV file was 4.479. 
-It is worth noting a consistent pattern where the submission platform tends to yield a 
+We have noticed a consistent pattern where the submission platform tends to yield a 
 score approximately 0.6 higher than the local score.
 
 \begin{figure}[htbp]
@@ -293,7 +299,7 @@ This is a representation of the evaluation.csv submitted to the scoring platform
 \section{Discussion}
 In this project paper, we have presented a viable solution for predicting the 
 position of a particle based on a set of extracted features from signals obtained 
-through sensor measurements.
+through the RSD sensor measurements.
 
 In our exploration, we initially directed our attention to the \textit{RandomForestRegressor}, 
 experimenting with various hyperparameters to fine-tune its performance. 
@@ -319,11 +325,10 @@ fitting time of near 5 minutes. This effort produced a final score of \textbf{4.
 Examining the leaderboard, it becomes apparent that superior results have been achieved,
 placing our solution in the top 22\%. While acknowledging that better solutions are 
 available, we think that our achieved score is considered quite good. 
-It is important to contextualize the significance of the score within the constraints
-of the problem. Given that the sensor's \textit{x} and \textit{y}
+
+Given that the sensor's \textit{x} and \textit{y}
 measurements are multiples of 5, 
 and our score is lower than 5, the margin of error falls within an acceptable range.\\\\
-
 
 \bibliography{bibliography}
 \bibliographystyle{ieeetr}
