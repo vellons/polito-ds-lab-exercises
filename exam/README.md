@@ -55,7 +55,9 @@ Submission score is the score obtained by submitting the predictions to the Poli
 | 2m 16s  | 100+SelectFwe+FS | squared_error | 0.45         | 0.99908564 | 4.154**         | 4.820**          |
 | 21m 08s | 600+SelectFwe+FS | squared_error | 0.45         | 0.99911044 | **4.099****     | **4.710****      |
 
-
+### Extra Trees Regressor with MultiOutputRegressor - differens hyperparameters
+| 48s     | 100+SelectFwe+FS | squared_error | 0.45         | -          | 3.977**         | 4.549**          |
+| 4m 56s  | 400+SelectFwe+FS | squared_error | 0.45         | 0.99921187 | **3.907****     | **4.479****      |
 
 ** Performed with test_size=0.05
 
